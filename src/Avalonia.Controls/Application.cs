@@ -31,7 +31,7 @@ namespace Avalonia
     /// method.
     /// - Tracks the lifetime of the application.
     /// </remarks>
-    public class Application : AvaloniaObject, IDataContextProvider, IGlobalDataTemplates, IGlobalStyles, IResourceHost, IApplicationPlatformEvents
+    public class Application : AvaloniaObject, IDataContextProvider, IGlobalDataTemplates, IApplicationThemeHost, IGlobalStyles, IResourceHost, IApplicationPlatformEvents
     {
         /// <summary>
         /// The application-global data templates.
@@ -202,6 +202,13 @@ namespace Avalonia
                    Styles.TryGetResource(key, out value);
         }
 
+        public bool TryGetThemeResource(ApplicationTheme theme, object key, out object? value)
+        {
+            value = null;
+            return (_resources?.TryGetThemeResource(theme, key, out value) ?? false) ||
+                   Styles.TryGetThemeResource(theme, key, out value);
+        }
+
         void IResourceHost.NotifyHostedResourcesChanged(ResourcesChangedEventArgs e)
         {
             ResourcesChanged?.Invoke(this, e);
@@ -230,6 +237,7 @@ namespace Avalonia
                 .Bind<IAccessKeyHandler>().ToTransient<AccessKeyHandler>()
                 .Bind<IGlobalDataTemplates>().ToConstant(this)
                 .Bind<IGlobalStyles>().ToConstant(this)
+                .Bind<IApplicationThemeHost>().ToConstant(this)
                 .Bind<IFocusManager>().ToConstant(FocusManager)
                 .Bind<IInputManager>().ToConstant(InputManager)
                 .Bind<IKeyboardNavigationHandler>().ToTransient<KeyboardNavigationHandler>()
@@ -295,6 +303,26 @@ namespace Avalonia
             get => _name;
             set => SetAndRaise(NameProperty, ref _name, value);
         }
-        
+
+        private ApplicationTheme _requestedTheme = ApplicationTheme.Light;
+        public static readonly DirectProperty<Application, ApplicationTheme> RequestedThemeProperty =
+            AvaloniaProperty.RegisterDirect<Application, ApplicationTheme>(nameof(RequestedTheme), o => o.RequestedTheme, (o, v) => o.RequestedTheme = v);
+        public ApplicationTheme RequestedTheme
+        {
+            get => _requestedTheme;
+            set => SetAndRaise(RequestedThemeProperty, ref _requestedTheme, value);
+        }
+
+        public event Action<ApplicationTheme>? ThemeChanged;
+
+        protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> change)
+        {
+            base.OnPropertyChanged(change);
+
+            if (change.Property == RequestedThemeProperty)
+            {
+                ThemeChanged?.Invoke(_requestedTheme);
+            }
+        }
     }
 }

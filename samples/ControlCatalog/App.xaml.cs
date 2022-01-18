@@ -1,6 +1,5 @@
 using System;
 using Avalonia;
-using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using Avalonia.Markup.Xaml.Styling;
@@ -30,40 +29,13 @@ namespace ControlCatalog
 
         public static FluentTheme Fluent = new FluentTheme(new Uri("avares://ControlCatalog/Styles"));
 
-        public static SimpleTheme Default = new SimpleTheme(new Uri("avares://ControlCatalog/Styles"));
-
-        public static Styles DefaultLight = new Styles
+        public static Styles Default = new Styles
         {
+            new SimpleTheme(new Uri("avares://ControlCatalog/Styles")),
             new StyleInclude(new Uri("resm:Styles?assembly=ControlCatalog"))
             {
                 Source = new Uri("avares://Avalonia.Themes.Fluent/Accents/AccentColors.xaml")
-            },
-            new StyleInclude(new Uri("resm:Styles?assembly=ControlCatalog"))
-            {
-                Source = new Uri("avares://Avalonia.Themes.Fluent/Accents/Base.xaml")
-            },
-            new StyleInclude(new Uri("resm:Styles?assembly=ControlCatalog"))
-            {
-                Source = new Uri("avares://Avalonia.Themes.Fluent/Accents/BaseLight.xaml")
-            },
-            Default
-        };
-
-        public static Styles DefaultDark = new Styles
-        {
-            new StyleInclude(new Uri("resm:Styles?assembly=ControlCatalog"))
-            {
-                Source = new Uri("avares://Avalonia.Themes.Fluent/Accents/AccentColors.xaml")
-            },
-            new StyleInclude(new Uri("resm:Styles?assembly=ControlCatalog"))
-            {
-                Source = new Uri("avares://Avalonia.Themes.Fluent/Accents/Base.xaml")
-            },
-            new StyleInclude(new Uri("resm:Styles?assembly=ControlCatalog"))
-            {
-                Source = new Uri("avares://Avalonia.Themes.Fluent/Accents/BaseDark.xaml")
-            },
-            Default
+            }
         };
 
         public override void Initialize()

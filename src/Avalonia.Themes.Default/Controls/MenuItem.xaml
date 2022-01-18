@@ -54,7 +54,7 @@
                        VerticalAlignment="Center"/>
             <Path Name="rightArrow"
                   Data="M0,0L4,3.5 0,7z"
-                  Fill="{DynamicResource ThemeForegroundBrush}"
+                  Fill="{ThemeResource ThemeForegroundBrush}"
                   Margin="10,0,0,0"
                   VerticalAlignment="Center"
                   Grid.Column="4"/>
@@ -62,8 +62,8 @@
                    PlacementMode="Right"
                    IsLightDismissEnabled="False"
                    IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}">
-              <Border Background="{DynamicResource ThemeBackgroundBrush}"
-                      BorderBrush="{DynamicResource ThemeBorderMidBrush}"
+              <Border Background="{ThemeResource ThemeBackgroundBrush}"
+                      BorderBrush="{ThemeResource ThemeBorderMidBrush}"
                       BorderThickness="{TemplateBinding BorderThickness}">
                 <ScrollViewer Classes="menuscroller">                  
                     <ItemsPresenter Name="PART_ItemsPresenter"
@@ -83,7 +83,7 @@
   <Style Selector="MenuItem:separator">
     <Setter Property="Template">
       <ControlTemplate>
-        <Separator Background="{DynamicResource ThemeControlMidBrush}"
+        <Separator Background="{ThemeResource ThemeControlMidBrush}"
                    Margin="20,1,0,1"
                    Height="1"/>
       </ControlTemplate>
@@ -113,8 +113,8 @@
                    IsLightDismissEnabled="True"
                    OverlayInputPassThroughElement="{Binding $parent[Menu]}"
                    IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}">
-              <Border Background="{DynamicResource ThemeBackgroundBrush}"
-                      BorderBrush="{DynamicResource ThemeBorderMidBrush}"
+              <Border Background="{ThemeResource ThemeBackgroundBrush}"
+                      BorderBrush="{ThemeResource ThemeBorderMidBrush}"
                       BorderThickness="{TemplateBinding BorderThickness}">
                 <ScrollViewer Classes="menuscroller">
                   <ItemsPresenter Name="PART_ItemsPresenter"
@@ -136,8 +136,8 @@
   </Style>
 
   <Style Selector="MenuItem:selected /template/ Border#root">
-    <Setter Property="Background" Value="{DynamicResource ThemeAccentBrush4}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeAccentBrush}"/>
+    <Setter Property="Background" Value="{ThemeResource ThemeAccentBrush4}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeAccentBrush}"/>
   </Style>
 
   <Style Selector="MenuItem:empty /template/ Path#rightArrow">
@@ -145,6 +145,6 @@
   </Style>
 
   <Style Selector="MenuItem:disabled">
-    <Setter Property="Opacity" Value="{DynamicResource ThemeDisabledOpacity}"/>
+    <Setter Property="Opacity" Value="{ThemeResource ThemeDisabledOpacity}"/>
   </Style>
 </Styles>

@@ -170,6 +170,25 @@ namespace Avalonia.Styling
             return false;
         }
 
+        public bool TryGetThemeResource(ApplicationTheme theme, object key, out object? value)
+        {
+            if (_resources != null && _resources.TryGetThemeResource(theme, key, out value))
+            {
+                return true;
+            }
+
+            for (var i = Count - 1; i >= 0; --i)
+            {
+                if (this[i] is IResourceProvider p && p.TryGetThemeResource(theme, key, out value))
+                {
+                    return true;
+                }
+            }
+
+            value = null;
+            return false;
+        }
+
         /// <inheritdoc/>
         public void AddRange(IEnumerable<IStyle> items) => _styles.AddRange(items);
 

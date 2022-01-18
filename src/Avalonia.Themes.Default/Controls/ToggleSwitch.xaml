@@ -8,38 +8,38 @@
     <x:Double x:Key="ToggleSwitchThemeMinWidth">0</x:Double>
     <Thickness x:Key="ToggleSwitchOnStrokeThickness">0</Thickness>
     <Thickness x:Key="ToggleSwitchOuterBorderStrokeThickness">1</Thickness>
-    <SolidColorBrush x:Key="ToggleSwitchContentForeground" Color="{DynamicResource ThemeForegroundColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchContentForegroundDisabled" Color="{DynamicResource ThemeForegroundLowColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchHeaderForeground" Color="{DynamicResource ThemeForegroundColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchHeaderForegroundDisabled" Color="{DynamicResource ThemeForegroundLowColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchContentForeground" Color="{ThemeResource ThemeForegroundColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchContentForegroundDisabled" Color="{ThemeResource ThemeForegroundLowColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchHeaderForeground" Color="{ThemeResource ThemeForegroundColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchHeaderForegroundDisabled" Color="{ThemeResource ThemeForegroundLowColor}" />
     <SolidColorBrush x:Key="ToggleSwitchContainerBackground" Color="Transparent" />
     <SolidColorBrush x:Key="ToggleSwitchContainerBackgroundPointerOver" Color="Transparent" />
     <SolidColorBrush x:Key="ToggleSwitchContainerBackgroundPressed" Color="Transparent" />
     <SolidColorBrush x:Key="ToggleSwitchContainerBackgroundDisabled" Color="Transparent" />
     <SolidColorBrush x:Key="ToggleSwitchFillOff" Color="Transparent" />
     <SolidColorBrush x:Key="ToggleSwitchFillOffPointerOver" Color="Transparent" />
-    <SolidColorBrush x:Key="ToggleSwitchFillOffPressed" Color="{DynamicResource ThemeControlMidHighColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchFillOffPressed" Color="{ThemeResource ThemeControlMidHighColor}" />
     <SolidColorBrush x:Key="ToggleSwitchFillOffDisabled" Color="Transparent" />
-    <SolidColorBrush x:Key="ToggleSwitchStrokeOff" Color="{DynamicResource ThemeBorderMidColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchStrokeOffPointerOver" Color="{DynamicResource ThemeBorderHighColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchStrokeOffPressed" Color="{DynamicResource ThemeBorderHighColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchStrokeOffDisabled" Color="{DynamicResource ThemeForegroundLowColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchFillOn" Color="{DynamicResource ThemeAccentColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchFillOnPointerOver" Color="{DynamicResource ThemeAccentColor2}" />
-    <SolidColorBrush x:Key="ToggleSwitchFillOnPressed" Color="{DynamicResource ThemeAccentColor3}" />
-    <SolidColorBrush x:Key="ToggleSwitchFillOnDisabled" Color="{DynamicResource ThemeForegroundLowColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchStrokeOn" Color="{DynamicResource ThemeAccentColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchStrokeOnPointerOver" Color="{DynamicResource ThemeAccentColor2}" />
-    <SolidColorBrush x:Key="ToggleSwitchStrokeOnPressed" Color="{DynamicResource ThemeAccentColor3}" />
-    <SolidColorBrush x:Key="ToggleSwitchStrokeOnDisabled" Color="{DynamicResource ThemeForegroundLowColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchKnobFillOff" Color="{DynamicResource ThemeBorderMidColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchKnobFillOffPointerOver" Color="{DynamicResource ThemeBorderHighColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchKnobFillOffPressed" Color="{DynamicResource ThemeBorderHighColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchKnobFillOffDisabled" Color="{DynamicResource ThemeForegroundLowColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchKnobFillOn" Color="{DynamicResource HighlightForegroundColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchKnobFillOnPointerOver" Color="{DynamicResource HighlightForegroundColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchKnobFillOnPressed" Color="{DynamicResource HighlightForegroundColor}" />
-    <SolidColorBrush x:Key="ToggleSwitchKnobFillOnDisabled" Color="{DynamicResource HighlightForegroundColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchStrokeOff" Color="{ThemeResource ThemeBorderMidColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchStrokeOffPointerOver" Color="{ThemeResource ThemeBorderHighColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchStrokeOffPressed" Color="{ThemeResource ThemeBorderHighColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchStrokeOffDisabled" Color="{ThemeResource ThemeForegroundLowColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchFillOn" Color="{ThemeResource ThemeAccentColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchFillOnPointerOver" Color="{ThemeResource ThemeAccentColor2}" />
+    <SolidColorBrush x:Key="ToggleSwitchFillOnPressed" Color="{ThemeResource ThemeAccentColor3}" />
+    <SolidColorBrush x:Key="ToggleSwitchFillOnDisabled" Color="{ThemeResource ThemeForegroundLowColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchStrokeOn" Color="{ThemeResource ThemeAccentColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchStrokeOnPointerOver" Color="{ThemeResource ThemeAccentColor2}" />
+    <SolidColorBrush x:Key="ToggleSwitchStrokeOnPressed" Color="{ThemeResource ThemeAccentColor3}" />
+    <SolidColorBrush x:Key="ToggleSwitchStrokeOnDisabled" Color="{ThemeResource ThemeForegroundLowColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchKnobFillOff" Color="{ThemeResource ThemeBorderMidColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchKnobFillOffPointerOver" Color="{ThemeResource ThemeBorderHighColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchKnobFillOffPressed" Color="{ThemeResource ThemeBorderHighColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchKnobFillOffDisabled" Color="{ThemeResource ThemeForegroundLowColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchKnobFillOn" Color="{ThemeResource HighlightForegroundColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchKnobFillOnPointerOver" Color="{ThemeResource HighlightForegroundColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchKnobFillOnPressed" Color="{ThemeResource HighlightForegroundColor}" />
+    <SolidColorBrush x:Key="ToggleSwitchKnobFillOnDisabled" Color="{ThemeResource HighlightForegroundColor}" />
   </Styles.Resources>
   <Design.PreviewWith>
     <StackPanel Margin="20" Width="250" Spacing="24" >
@@ -72,12 +72,12 @@
   </Design.PreviewWith>
 
   <Style Selector="ToggleSwitch">
-    <Setter Property="Foreground" Value="{DynamicResource ToggleSwitchContentForeground}" />
+    <Setter Property="Foreground" Value="{ThemeResource ToggleSwitchContentForeground}" />
     <Setter Property="HorizontalAlignment" Value="Left" />
     <Setter Property="VerticalAlignment" Value="Center" />
     <Setter Property="HorizontalContentAlignment" Value="Left" />
     <Setter Property="VerticalContentAlignment" Value="Center" />
-    <Setter Property="FontSize" Value="{DynamicResource ControlContentThemeFontSize}" />
+    <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}" />
     <Setter Property="Template">
       <ControlTemplate>
         <Grid Background="{TemplateBinding Background}"
@@ -96,9 +96,9 @@
             VerticalAlignment="Top">
 
             <Grid.RowDefinitions>
-              <RowDefinition Height="{DynamicResource ToggleSwitchPreContentMargin}" />
+              <RowDefinition Height="{ThemeResource ToggleSwitchPreContentMargin}" />
               <RowDefinition Height="Auto" />
-              <RowDefinition Height="{DynamicResource ToggleSwitchPostContentMargin}" />
+              <RowDefinition Height="{ThemeResource ToggleSwitchPostContentMargin}" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -134,14 +134,14 @@
               Height="20"
               Width="40"
               CornerRadius="10"
-              BorderThickness="{DynamicResource ToggleSwitchOuterBorderStrokeThickness}" />
+              BorderThickness="{ThemeResource ToggleSwitchOuterBorderStrokeThickness}" />
 
             <Border x:Name="SwitchKnobBounds"
               Grid.Row="1"
               Height="20"
               Width="40"
               CornerRadius="10"
-              BorderThickness="{DynamicResource ToggleSwitchOnStrokeThickness}"/>
+              BorderThickness="{ThemeResource ToggleSwitchOnStrokeThickness}"/>
 
             <Canvas x:Name="SwitchKnob" Grid.Row="1"
                HorizontalAlignment="Left"
@@ -164,7 +164,7 @@
   </Style>
 
   <Style Selector="ToggleSwitch /template/ ContentPresenter#PART_ContentPresenter">
-    <Setter Property="Margin" Value="{DynamicResource ToggleSwitchTopHeaderMargin}" />
+    <Setter Property="Margin" Value="{ThemeResource ToggleSwitchTopHeaderMargin}" />
   </Style>
   <Style Selector="ToggleSwitch /template/ ContentPresenter#PART_ContentPresenter:empty">
     <Setter Property="Margin" Value="0" />
@@ -172,25 +172,25 @@
 
   <!-- NormalState -->
   <Style Selector="ToggleSwitch /template/ Grid#SwitchAreaGrid">
-    <Setter Property="Background" Value="{DynamicResource ToggleSwitchContainerBackground}"/>
+    <Setter Property="Background" Value="{ThemeResource ToggleSwitchContainerBackground}"/>
   </Style>
 
   <Style Selector="ToggleSwitch /template/ Border#OuterBorder">
-    <Setter Property="Background" Value="{DynamicResource ToggleSwitchFillOff}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ToggleSwitchStrokeOff}"/>
+    <Setter Property="Background" Value="{ThemeResource ToggleSwitchFillOff}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ToggleSwitchStrokeOff}"/>
   </Style>
 
   <Style Selector="ToggleSwitch /template/ Border#SwitchKnobBounds">
-    <Setter Property="Background" Value="{DynamicResource ToggleSwitchFillOn}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ToggleSwitchStrokeOn}"/>
+    <Setter Property="Background" Value="{ThemeResource ToggleSwitchFillOn}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ToggleSwitchStrokeOn}"/>
   </Style>
 
   <Style Selector="ToggleSwitch /template/ Ellipse#SwitchKnobOn">
-    <Setter Property="Fill" Value="{DynamicResource ToggleSwitchKnobFillOn}"/>
+    <Setter Property="Fill" Value="{ThemeResource ToggleSwitchKnobFillOn}"/>
   </Style>
 
   <Style Selector="ToggleSwitch /template/ Ellipse#SwitchKnobOff">
-    <Setter Property="Fill" Value="{DynamicResource ToggleSwitchKnobFillOff}"/>
+    <Setter Property="Fill" Value="{ThemeResource ToggleSwitchKnobFillOff}"/>
   </Style>
 
   <Style Selector="ToggleSwitch /template/ Grid#MovingKnobs">
@@ -203,71 +203,71 @@
 
   <!-- PointerOverState -->
   <Style Selector="ToggleSwitch:pointerover /template/ Border#OuterBorder">
-    <Setter Property="BorderBrush" Value="{DynamicResource ToggleSwitchStrokeOffPointerOver}"/>
-    <Setter Property="Background" Value="{DynamicResource ToggleSwitchFillOffPointerOver}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ToggleSwitchStrokeOffPointerOver}"/>
+    <Setter Property="Background" Value="{ThemeResource ToggleSwitchFillOffPointerOver}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:pointerover /template/ Ellipse#SwitchKnobOff">
-    <Setter Property="Fill" Value="{DynamicResource ToggleSwitchKnobFillOffPointerOver}"/>
+    <Setter Property="Fill" Value="{ThemeResource ToggleSwitchKnobFillOffPointerOver}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:pointerover /template/ Ellipse#SwitchKnobOn">
-    <Setter Property="Fill" Value="{DynamicResource ToggleSwitchKnobFillOnPointerOver}"/>
+    <Setter Property="Fill" Value="{ThemeResource ToggleSwitchKnobFillOnPointerOver}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:pointerover /template/ Border#SwitchKnobBounds">
-    <Setter Property="Background" Value="{DynamicResource ToggleSwitchFillOnPointerOver}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ToggleSwitchStrokeOnPointerOver}"/>
+    <Setter Property="Background" Value="{ThemeResource ToggleSwitchFillOnPointerOver}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ToggleSwitchStrokeOnPointerOver}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:pointerover /template/ Grid#SwitchAreaGrid">
-    <Setter Property="Background" Value="{DynamicResource ToggleSwitchContainerBackgroundPointerOver}"/>
+    <Setter Property="Background" Value="{ThemeResource ToggleSwitchContainerBackgroundPointerOver}"/>
   </Style>
 
   <!-- PressedState -->
   <Style Selector="ToggleSwitch:pressed /template/ Border#OuterBorder">
-    <Setter Property="BorderBrush" Value="{DynamicResource ToggleSwitchStrokeOffPressed}"/>
-    <Setter Property="Background" Value="{DynamicResource ToggleSwitchFillOffPressed}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ToggleSwitchStrokeOffPressed}"/>
+    <Setter Property="Background" Value="{ThemeResource ToggleSwitchFillOffPressed}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:pressed /template/ Border#SwitchKnobBounds">
-    <Setter Property="Background" Value="{DynamicResource ToggleSwitchFillOnPressed}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ToggleSwitchStrokeOnPressed}"/>
+    <Setter Property="Background" Value="{ThemeResource ToggleSwitchFillOnPressed}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ToggleSwitchStrokeOnPressed}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:pressed /template/ Ellipse#SwitchKnobOff">
-    <Setter Property="Fill" Value="{DynamicResource ToggleSwitchKnobFillOffPressed}"/>
+    <Setter Property="Fill" Value="{ThemeResource ToggleSwitchKnobFillOffPressed}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:pressed /template/ Ellipse#SwitchKnobOn">
-    <Setter Property="Fill" Value="{DynamicResource ToggleSwitchKnobFillOnPressed}"/>
+    <Setter Property="Fill" Value="{ThemeResource ToggleSwitchKnobFillOnPressed}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:pressed /template/ Grid#SwitchAreaGrid">
-    <Setter Property="Background" Value="{DynamicResource ToggleSwitchContainerBackgroundPressed}"/>
+    <Setter Property="Background" Value="{ThemeResource ToggleSwitchContainerBackgroundPressed}"/>
   </Style>
 
   <!-- DisabledState -->
   <Style Selector="ToggleSwitch:disabled">
-    <Setter Property="Foreground" Value="{DynamicResource ToggleSwitchHeaderForegroundDisabled}"/>
+    <Setter Property="Foreground" Value="{ThemeResource ToggleSwitchHeaderForegroundDisabled}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:disabled /template/ Border#OuterBorder">
-    <Setter Property="BorderBrush" Value="{DynamicResource ToggleSwitchStrokeOffDisabled}"/>
-    <Setter Property="Background" Value="{DynamicResource ToggleSwitchFillOffPressed}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ToggleSwitchStrokeOffDisabled}"/>
+    <Setter Property="Background" Value="{ThemeResource ToggleSwitchFillOffPressed}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:disabled /template/ Ellipse#SwitchKnobOff">
-    <Setter Property="Fill" Value="{DynamicResource ToggleSwitchKnobFillOffDisabled}"/>
+    <Setter Property="Fill" Value="{ThemeResource ToggleSwitchKnobFillOffDisabled}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:disabled /template/ Ellipse#SwitchKnobOn">
-    <Setter Property="Fill" Value="{DynamicResource ToggleSwitchKnobFillOnDisabled}"/>
+    <Setter Property="Fill" Value="{ThemeResource ToggleSwitchKnobFillOnDisabled}"/>
   </Style>
 
   <Style Selector="ToggleSwitch:disabled /template/ Border#SwitchKnobBounds">
-    <Setter Property="Background" Value="{DynamicResource ToggleSwitchFillOnDisabled}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ToggleSwitchStrokeOnDisabled}"/>
+    <Setter Property="Background" Value="{ThemeResource ToggleSwitchFillOnDisabled}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ToggleSwitchStrokeOnDisabled}"/>
   </Style>
 
   <!-- CheckedState -->

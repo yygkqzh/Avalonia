@@ -18,9 +18,6 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="0,3,6,3"/>
         </Style>
-        <Style Selector="Button[IsDefault=true]">
-            <Setter Property="Background" Value="{DynamicResource HighlightBrush}"/>
-        </Style>
     </UserControl.Styles>
     <ScrollViewer VerticalScrollBarVisibility="Auto" 
                   HorizontalScrollBarVisibility="Hidden">
@@ -35,7 +32,7 @@
             </GridSplitter>
             <StackPanel Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button IsCancel="True" Command="{Binding #_labelsPage.DoCancel}">Cancel</Button>
-                <Button IsDefault="True" Command="{Binding #_labelsPage.DoSave}">Save</Button>
+                <Button IsDefault="True" Classes="accent" Command="{Binding #_labelsPage.DoSave}">Save</Button>
             </StackPanel>
         </Grid>
     </ScrollViewer>

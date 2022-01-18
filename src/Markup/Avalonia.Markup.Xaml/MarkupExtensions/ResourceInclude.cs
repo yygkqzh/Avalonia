@@ -59,6 +59,17 @@ namespace Avalonia.Markup.Xaml.MarkupExtensions
             return false;
         }
 
+        public bool TryGetThemeResource(ApplicationTheme theme, object key, out object? value)
+        {
+            if (!_isLoading)
+            {
+                return Loaded.TryGetThemeResource(theme, key, out value);
+            }
+
+            value = null;
+            return false;
+        }
+
         void IResourceProvider.AddOwner(IResourceHost owner) => Loaded.AddOwner(owner);
         void IResourceProvider.RemoveOwner(IResourceHost owner) => Loaded.RemoveOwner(owner);
 

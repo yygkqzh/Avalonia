@@ -50,6 +50,7 @@ namespace ControlCatalog
                         }
                         Application.Current.Styles[0] = App.Fluent;
                         Application.Current.Styles[1] = App.DataGridFluent;
+                        Application.Current.RequestedTheme = ApplicationTheme.Light;
                     }
                     else if (theme == CatalogTheme.FluentDark)
                     {
@@ -60,18 +61,19 @@ namespace ControlCatalog
                         }
                         Application.Current.Styles[0] = App.Fluent;
                         Application.Current.Styles[1] = App.DataGridFluent;
+                        Application.Current.RequestedTheme = ApplicationTheme.Dark;
                     }
                     else if (theme == CatalogTheme.DefaultLight)
                     {
-                        App.Default.Mode = Avalonia.Themes.Default.SimpleThemeMode.Light;
-                        Application.Current.Styles[0] = App.DefaultLight;
+                        Application.Current.Styles[0] = App.Default;
                         Application.Current.Styles[1] = App.DataGridDefault;
+                        Application.Current.RequestedTheme = ApplicationTheme.Light;
                     }
                     else if (theme == CatalogTheme.DefaultDark)
                     {
-                        App.Default.Mode = Avalonia.Themes.Default.SimpleThemeMode.Dark;
-                        Application.Current.Styles[0] = App.DefaultDark;
+                        Application.Current.Styles[0] = App.Default;
                         Application.Current.Styles[1] = App.DataGridDefault;
+                        Application.Current.RequestedTheme = ApplicationTheme.Dark;
                     }
                 }
             };

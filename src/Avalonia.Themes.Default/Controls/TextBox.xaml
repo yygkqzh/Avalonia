@@ -17,12 +17,12 @@
     </ContextMenu>
   </Styles.Resources>
   <Style Selector="TextBox">
-    <Setter Property="CaretBrush" Value="{DynamicResource ThemeForegroundBrush}" />
-    <Setter Property="Background" Value="{DynamicResource ThemeBackgroundBrush}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}"/>
-    <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}"/>
-    <Setter Property="SelectionBrush" Value="{DynamicResource HighlightBrush}"/>
-    <Setter Property="SelectionForegroundBrush" Value="{DynamicResource HighlightForegroundBrush}"/>
+    <Setter Property="CaretBrush" Value="{ThemeResource ThemeForegroundBrush}" />
+    <Setter Property="Background" Value="{ThemeResource ThemeBackgroundBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeBorderMidBrush}"/>
+    <Setter Property="BorderThickness" Value="{ThemeResource ThemeBorderThickness}"/>
+    <Setter Property="SelectionBrush" Value="{ThemeResource HighlightBrush}"/>
+    <Setter Property="SelectionForegroundBrush" Value="{ThemeResource HighlightForegroundBrush}"/>
     <Setter Property="Padding" Value="4"/>
     <Setter Property="ContextFlyout" Value="{StaticResource DefaultTextBoxContextFlyout}" />
     <Setter Property="Template">
@@ -37,8 +37,8 @@
                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
 
             <TextBlock Name="floatingWatermark"
-                       Foreground="{DynamicResource ThemeAccentBrush}"
-                       FontSize="{DynamicResource FontSizeSmall}"
+                       Foreground="{ThemeResource ThemeAccentBrush}"
+                       FontSize="{ThemeResource FontSizeSmall}"
                        Text="{TemplateBinding Watermark}"
                        DockPanel.Dock="Top">
               <TextBlock.IsVisible>
@@ -90,19 +90,19 @@
     </Setter>
   </Style>
   <Style Selector="TextBox:pointerover /template/ Border#border">
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderHighBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeBorderHighBrush}"/>
   </Style>
   <Style Selector="TextBox:focus /template/ Border#border">
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderHighBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeBorderHighBrush}"/>
   </Style>
   <Style Selector="TextBox:error /template/ Border#border">
-    <Setter Property="BorderBrush" Value="{DynamicResource ErrorBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ErrorBrush}"/>
   </Style>
   <Style Selector="TextBox /template/ DockPanel">
     <Setter Property="Cursor" Value="IBeam" />
   </Style>
   <Style Selector="TextBox:disabled /template/ Border#border">
-      <Setter Property="Opacity" Value="{DynamicResource ThemeDisabledOpacity}" />
+      <Setter Property="Opacity" Value="{ThemeResource ThemeDisabledOpacity}" />
   </Style>
   
   <Style Selector="TextBox.clearButton[AcceptsReturn=False][IsReadOnly=False]:focus:not(TextBox:empty)">
@@ -123,7 +123,7 @@
                   BorderThickness="{TemplateBinding BorderThickness}" 
                   Background="Transparent">
             <Path x:Name="PART_GlyphElement"
-                  Fill="{DynamicResource ThemeForegroundColor}"
+                  Fill="{ThemeResource ThemeForegroundColor}"
                   Data="{StaticResource TextBoxClearButtonData}"
                   Height="10"
                   Width="10"
@@ -164,16 +164,16 @@
                   Width="12">
             <Panel>
               <Path x:Name="PART_GlyphElement_Reveal"
-                    Fill="{DynamicResource ThemeForegroundColor}"
-                    Data="{DynamicResource PasswordBoxRevealButtonData}"
+                    Fill="{ThemeResource ThemeForegroundColor}"
+                    Data="{ThemeResource PasswordBoxRevealButtonData}"
                     Height="8"
                     Width="12"
                     Stretch="Uniform"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center" />
               <Path x:Name="PART_GlyphElement_Hide"
-                    Fill="{DynamicResource ThemeForegroundColor}"
-                    Data="{DynamicResource PasswordBoxHideButtonData}"
+                    Fill="{ThemeResource ThemeForegroundColor}"
+                    Data="{ThemeResource PasswordBoxHideButtonData}"
                     Height="12"
                     Width="12"
                     Stretch="Uniform"

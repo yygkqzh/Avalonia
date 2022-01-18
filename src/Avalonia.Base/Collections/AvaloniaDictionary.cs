@@ -14,11 +14,7 @@ namespace Avalonia.Collections
     /// </summary>
     /// <typeparam name="TKey">The type of the dictionary key.</typeparam>
     /// <typeparam name="TValue">The type of the dictionary value.</typeparam>
-    public class AvaloniaDictionary<TKey, TValue> : IDictionary<TKey, TValue>,
-        IDictionary,
-        INotifyCollectionChanged,
-        INotifyPropertyChanged
-            where TKey : notnull
+    public class AvaloniaDictionary<TKey, TValue> : IAvaloniaDictionary<TKey, TValue> where TKey : notnull
     {
         private Dictionary<TKey, TValue> _inner;
 
@@ -61,6 +57,10 @@ namespace Avalonia.Collections
         bool ICollection.IsSynchronized => ((IDictionary)_inner).IsSynchronized;
 
         object ICollection.SyncRoot => ((IDictionary)_inner).SyncRoot;
+
+        IEnumerable<TKey> IReadOnlyDictionary<TKey, TValue>.Keys => _inner.Keys;
+
+        IEnumerable<TValue> IReadOnlyDictionary<TKey, TValue>.Values => _inner.Values;
 
         /// <summary>
         /// Gets or sets the named resource.
@@ -117,7 +117,7 @@ namespace Avalonia.Collections
 
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Count)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(CommonPropertyNames.IndexerName));
-            
+
 
             if (CollectionChanged != null)
             {
@@ -196,7 +196,7 @@ namespace Avalonia.Collections
         void IDictionary.Add(object key, object? value) => Add((TKey)key, (TValue)value!);
 
         /// <inheritdoc/>
-        bool IDictionary.Contains(object key) => ((IDictionary) _inner).Contains(key);
+        bool IDictionary.Contains(object key) => ((IDictionary)_inner).Contains(key);
 
         /// <inheritdoc/>
         IDictionaryEnumerator IDictionary.GetEnumerator() => ((IDictionary)_inner).GetEnumerator();
@@ -208,7 +208,7 @@ namespace Avalonia.Collections
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Count)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs($"Item[{key}]"));
-            
+
 
             if (CollectionChanged != null)
             {

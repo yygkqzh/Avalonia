@@ -1,13 +1,13 @@
 <Styles xmlns="https://github.com/avaloniaui">
     <Style Selector="RepeatButton">
         <Setter Property="Background"
-                Value="{DynamicResource ThemeControlMidBrush}" />
+                Value="{ThemeResource ThemeControlMidBrush}" />
         <Setter Property="BorderBrush"
-                Value="{DynamicResource ThemeBorderLowBrush}" />
+                Value="{ThemeResource ThemeBorderLowBrush}" />
         <Setter Property="BorderThickness"
-                Value="{DynamicResource ThemeBorderThickness}" />
+                Value="{ThemeResource ThemeBorderThickness}" />
         <Setter Property="Foreground"
-                Value="{DynamicResource ThemeForegroundBrush}" />
+                Value="{ThemeResource ThemeForegroundBrush}" />
         <Setter Property="HorizontalContentAlignment"
                 Value="Center" />
         <Setter Property="VerticalContentAlignment"
@@ -32,10 +32,10 @@
     </Style>
     <Style Selector="RepeatButton:pointerover /template/ ContentPresenter">
         <Setter Property="BorderBrush"
-                Value="{DynamicResource ThemeBorderMidBrush}" />
+                Value="{ThemeResource ThemeBorderMidBrush}" />
     </Style>
     <Style Selector="RepeatButton:disabled">
         <Setter Property="Opacity"
-                Value="{DynamicResource ThemeDisabledOpacity}" />
+                Value="{ThemeResource ThemeDisabledOpacity}" />
     </Style>
 </Styles>

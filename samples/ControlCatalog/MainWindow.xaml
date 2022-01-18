@@ -12,7 +12,6 @@
         ExtendClientAreaTitleBarHeightHint="{Binding TitleBarHeight}"
         TransparencyLevelHint="{Binding TransparencyLevel}"        
         x:Name="MainWindow"
-        Background="Transparent"
         x:Class="ControlCatalog.MainWindow" WindowState="{Binding WindowState, Mode=TwoWay}">
   <NativeMenu.Menu>
     <NativeMenu>

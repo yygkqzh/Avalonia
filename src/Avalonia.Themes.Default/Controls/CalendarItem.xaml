@@ -19,7 +19,7 @@
                   Margin="0,2,0,2">
 
             <Border CornerRadius="1"
-                    BorderBrush="{DynamicResource ThemeBackgroundBrush}"
+                    BorderBrush="{ThemeResource ThemeBackgroundBrush}"
                     BorderThickness="2">
               <Grid>
                 <Grid.RowDefinitions>
@@ -47,14 +47,14 @@
                     <Setter Property="Width" Value="28"/>
                   </Style>
                   <Style Selector="Button.CalendarNavigation > Path">
-                    <Setter Property="Fill" Value="{DynamicResource ThemeForegroundBrush}"/>
+                    <Setter Property="Fill" Value="{ThemeResource ThemeForegroundBrush}"/>
                   </Style>
                   <Style Selector="Button.CalendarNavigation:pointerover > Path">
-                    <Setter Property="Fill" Value="{DynamicResource HighlightBrush}"/>
+                    <Setter Property="Fill" Value="{ThemeResource HighlightBrush}"/>
                   </Style>
 
                   <Style Selector="Button#HeaderButton:pointerover">
-                    <Setter Property="Foreground" Value="{DynamicResource HighlightBrush}"/>
+                    <Setter Property="Foreground" Value="{ThemeResource HighlightBrush}"/>
                   </Style>
                 </Grid.Styles>
 
@@ -154,8 +154,8 @@
 
           <Rectangle Name="DisabledVisual"
                      Stretch="Fill"
-                     Fill="{DynamicResource ThemeControlLowBrush}"
-                     Opacity="{DynamicResource ThemeDisabledOpacity}"
+                     Fill="{ThemeResource ThemeControlLowBrush}"
+                     Opacity="{ThemeResource ThemeDisabledOpacity}"
                      Margin="0,2,0,2" />
 
         </Panel>

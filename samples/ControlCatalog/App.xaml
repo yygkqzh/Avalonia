@@ -31,6 +31,24 @@
     </Style>
     <StyleInclude Source="avares://ControlSamples/HamburgerMenu/HamburgerMenu.xaml" />
   </Application.Styles>
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+          <Color x:Key="CatalogBaseLowColor">#33000000</Color>
+          <Color x:Key="CatalogBaseMediumColor">#99000000</Color>
+          <Color x:Key="CatalogChromeMediumColor">#FFE6E6E6</Color>
+          <Color x:Key="CatalogBaseHighColor">#FF000000</Color>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Dark">
+          <Color x:Key="CatalogBaseLowColor">#33FFFFFF</Color>
+          <Color x:Key="CatalogBaseMediumColor">#99FFFFFF</Color>
+          <Color x:Key="CatalogChromeMediumColor">#FF1F1F1F</Color>
+          <Color x:Key="CatalogBaseHighColor">#FFFFFFFF</Color>
+        </ResourceDictionary>
+      </ResourceDictionary.ThemeDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
   <TrayIcon.Icons>
     <TrayIcons>
       <TrayIcon Icon="/Assets/test_icon.ico" ToolTipText="Avalonia Tray Icon ToolTip">

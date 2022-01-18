@@ -43,7 +43,7 @@
                      Visibility="{TemplateBinding VerticalScrollBarVisibility}"
                      Grid.Column="1"
                      Focusable="False"/>
-          <Panel Grid.Row="1" Grid.Column="1" Background="{DynamicResource ThemeControlMidBrush}"/>
+          <Panel Grid.Row="1" Grid.Column="1" Background="{ThemeResource ThemeControlMidBrush}"/>
         </Grid>
       </ControlTemplate>
     </Setter>
@@ -96,10 +96,10 @@
     </Setter>
   </Style>
   <Style Selector="ScrollViewer.menuscroller /template/ RepeatButton > Path">
-    <Setter Property="Fill" Value="{DynamicResource ThemeForegroundLowBrush}" />
+    <Setter Property="Fill" Value="{ThemeResource ThemeForegroundLowBrush}" />
   </Style>
 
   <Style Selector="ScrollViewer.menuscroller /template/ RepeatButton:pointerover > Path">
-    <Setter Property="Fill" Value="{DynamicResource ThemeAccentBrush}" />
+    <Setter Property="Fill" Value="{ThemeResource ThemeAccentBrush}" />
   </Style>
 </Styles>

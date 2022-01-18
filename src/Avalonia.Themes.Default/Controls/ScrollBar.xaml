@@ -3,14 +3,14 @@
     <Setter Property="Cursor" Value="Arrow" />
     <Setter Property="Template">
       <ControlTemplate>
-        <Border Background="{DynamicResource ThemeControlMidBrush}"
+        <Border Background="{ThemeResource ThemeControlMidBrush}"
                 UseLayoutRounding="False">
           <Grid RowDefinitions="Auto,*,Auto">
             <RepeatButton Name="PART_LineUpButton" HorizontalAlignment="Center"
                           Classes="repeat"
                           Grid.Row="0"
                           Focusable="False"
-                          MinHeight="{DynamicResource ScrollBarThickness}">
+                          MinHeight="{ThemeResource ScrollBarThickness}">
               <Path Data="M 0 4 L 8 4 L 4 0 Z" />
             </RepeatButton>
             <Track Grid.Row="1"
@@ -38,7 +38,7 @@
                           Grid.Row="2"
                           Grid.Column="2"
                           Focusable="False"
-                          MinHeight="{DynamicResource ScrollBarThickness}">
+                          MinHeight="{ThemeResource ScrollBarThickness}">
               <Path Data="M 0 0 L 4 4 L 8 0 Z" />
             </RepeatButton>
           </Grid>
@@ -47,10 +47,10 @@
     </Setter>
   </Style>
   <Style Selector="ScrollBar:horizontal">
-    <Setter Property="Height" Value="{DynamicResource ScrollBarThickness}" />
+    <Setter Property="Height" Value="{ThemeResource ScrollBarThickness}" />
     <Setter Property="Template">
       <ControlTemplate>
-        <Border Background="{DynamicResource ThemeControlMidBrush}"
+        <Border Background="{ThemeResource ThemeControlMidBrush}"
                 UseLayoutRounding="False">
           <Grid ColumnDefinitions="Auto,*,Auto">
             <RepeatButton Name="PART_LineUpButton" VerticalAlignment="Center"
@@ -58,7 +58,7 @@
                           Grid.Row="0"
                           Grid.Column="0"
                           Focusable="False"
-                          MinWidth="{DynamicResource ScrollBarThickness}">
+                          MinWidth="{ThemeResource ScrollBarThickness}">
               <Path Data="M 4 0 L 4 8 L 0 4 Z" />
             </RepeatButton>
             <Track Grid.Row="1"
@@ -85,7 +85,7 @@
                           Grid.Row="2"
                           Grid.Column="2"
                           Focusable="False"
-                          MinWidth="{DynamicResource ScrollBarThickness}">
+                          MinWidth="{ThemeResource ScrollBarThickness}">
               <Path Data="M 0 0 L 4 4 L 0 8 Z"  />
             </RepeatButton>
           </Grid>
@@ -94,7 +94,7 @@
     </Setter>
   </Style>
   <Style Selector="ScrollBar /template/ Thumb#thumb">
-    <Setter Property="Background" Value="{DynamicResource ThemeControlMidHighBrush}"/>
+    <Setter Property="Background" Value="{ThemeResource ThemeControlMidHighBrush}"/>
     <Setter Property="Template">
       <Setter.Value>
         <ControlTemplate>
@@ -104,21 +104,21 @@
     </Setter>
   </Style>
   <Style Selector="ScrollBar /template/ Thumb#thumb:pointerover">
-    <Setter Property="Background" Value="{DynamicResource ThemeControlHighBrush}"/>
+    <Setter Property="Background" Value="{ThemeResource ThemeControlHighBrush}"/>
   </Style>
   <Style Selector="ScrollBar /template/ Thumb#thumb:pressed">
-    <Setter Property="Background" Value="{DynamicResource ThemeControlVeryHighBrush}"/>
+    <Setter Property="Background" Value="{ThemeResource ThemeControlVeryHighBrush}"/>
   </Style>
   <Style Selector="ScrollBar:horizontal /template/ Thumb#thumb">
-    <Setter Property="MinWidth" Value="{DynamicResource ScrollBarThickness}" />
-    <Setter Property="Height" Value="{DynamicResource ScrollBarThumbThickness}" />
+    <Setter Property="MinWidth" Value="{ThemeResource ScrollBarThickness}" />
+    <Setter Property="Height" Value="{ThemeResource ScrollBarThumbThickness}" />
   </Style>
   <Style Selector="ScrollBar:vertical">
-    <Setter Property="Width" Value="{DynamicResource ScrollBarThickness}" />
+    <Setter Property="Width" Value="{ThemeResource ScrollBarThickness}" />
   </Style>
   <Style Selector="ScrollBar:vertical /template/ Thumb#thumb">
-    <Setter Property="MinHeight" Value="{DynamicResource ScrollBarThickness}" />
-    <Setter Property="Width" Value="{DynamicResource ScrollBarThumbThickness}" />
+    <Setter Property="MinHeight" Value="{ThemeResource ScrollBarThickness}" />
+    <Setter Property="Width" Value="{ThemeResource ScrollBarThumbThickness}" />
   </Style>
   <Style Selector="ScrollBar /template/ RepeatButton.repeat">
     <Setter Property="Padding" Value="2" />
@@ -133,10 +133,10 @@
   </Style>
 
   <Style Selector="ScrollBar /template/ RepeatButton > Path">
-    <Setter Property="Fill" Value="{DynamicResource ThemeForegroundLowBrush}" />
+    <Setter Property="Fill" Value="{ThemeResource ThemeForegroundLowBrush}" />
   </Style>
 
   <Style Selector="ScrollBar /template/ RepeatButton:pointerover > Path">
-    <Setter Property="Fill" Value="{DynamicResource ThemeAccentBrush}" />
+    <Setter Property="Fill" Value="{ThemeResource ThemeAccentBrush}" />
   </Style>
 </Styles>

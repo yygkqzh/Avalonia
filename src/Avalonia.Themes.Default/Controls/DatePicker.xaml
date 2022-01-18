@@ -24,7 +24,7 @@
 
   <!-- Styles for the items displayed in the selectors -->
   <Style Selector="ListBoxItem.DateTimePickerItem">
-    <Setter Property="Padding" Value="{DynamicResource DatePickerFlyoutPresenterItemPadding}"/>
+    <Setter Property="Padding" Value="{ThemeResource DatePickerFlyoutPresenterItemPadding}"/>
     <Setter Property="VerticalContentAlignment" Value="Center" />
     <Setter Property="HorizontalContentAlignment" Value="Center" />
   </Style>
@@ -36,10 +36,10 @@
   </Style>
   <Style Selector="ListBoxItem.DateTimePickerItem:selected /template/ ContentPresenter">
     <Setter Property="Background" Value="Transparent" />
-    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ThemeForegroundBrush}"/>
+    <Setter Property="TextBlock.Foreground" Value="{ThemeResource ThemeForegroundBrush}"/>
   </Style>
   <Style Selector="ListBoxItem.DateTimePickerItem.MonthItem">
-    <Setter Property="Padding" Value="{DynamicResource DatePickerFlyoutPresenterMonthPadding}"/>
+    <Setter Property="Padding" Value="{ThemeResource DatePickerFlyoutPresenterMonthPadding}"/>
     <Setter Property="VerticalContentAlignment" Value="Center" />
     <Setter Property="HorizontalContentAlignment" Value="Left" />
   </Style>
@@ -47,7 +47,7 @@
 
   <!-- This is used for both the accept/dismiss & repeatbuttons in the presenter-->
   <Style Selector=":is(Button).DateTimeFlyoutButtonStyle">
-    <Setter Property="Background" Value="{DynamicResource ThemeControlTransparentBrush}" />  
+    <Setter Property="Background" Value="{ThemeResource ThemeControlTransparentBrush}" />  
     <Setter Property="HorizontalContentAlignment" Value="Center"/>
     <Setter Property="VerticalContentAlignment" Value="Center"/>
     <Setter Property="Template">
@@ -55,10 +55,10 @@
         <Border Background="{TemplateBinding Background}">
           <ContentPresenter x:Name="ContentPresenter"
                   Background="{TemplateBinding Background}"
-                  BorderBrush="{DynamicResource ThemeControlTransparentBrush}"
-                  BorderThickness="{DynamicResource DateTimeFlyoutButtonBorderThickness}"
+                  BorderBrush="{ThemeResource ThemeControlTransparentBrush}"
+                  BorderThickness="{ThemeResource DateTimeFlyoutButtonBorderThickness}"
                   Content="{TemplateBinding Content}"
-                  TextBlock.Foreground="{DynamicResource ThemeForegroundBrush}"
+                  TextBlock.Foreground="{ThemeResource ThemeForegroundBrush}"
                   ContentTemplate="{TemplateBinding ContentTemplate}"
                   Padding="{TemplateBinding Padding}"
                   HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
@@ -69,15 +69,15 @@
   </Style>
 
   <Style Selector=":is(Button).DateTimeFlyoutButtonStyle:pointerover /template/ ContentPresenter">
-    <Setter Property="Background" Value="{DynamicResource ThemeControlHighlightLowBrush}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeControlTransparentBrush}"/>
-    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ThemeForegroundBrush}"/>
+    <Setter Property="Background" Value="{ThemeResource ThemeControlHighlightLowBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeControlTransparentBrush}"/>
+    <Setter Property="TextBlock.Foreground" Value="{ThemeResource ThemeForegroundBrush}"/>
   </Style>
 
   <Style Selector=":is(Button).DateTimeFlyoutButtonStyle:pressed /template/ ContentPresenter">
-    <Setter Property="Background" Value="{DynamicResource ThemeControlHighlightMidBrush}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeControlTransparentBrush}"/>
-    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ThemeForegroundBrush}"/>
+    <Setter Property="Background" Value="{ThemeResource ThemeControlHighlightMidBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeControlTransparentBrush}"/>
+    <Setter Property="TextBlock.Foreground" Value="{ThemeResource ThemeForegroundBrush}"/>
   </Style>
 
 
@@ -86,7 +86,7 @@
     <Setter Property="Height" Value="22" />
     <Setter Property="HorizontalAlignment" Value="Stretch" />
     <Setter Property="Focusable" Value="False" />
-    <Setter Property="Background" Value="{DynamicResource ThemeControlHighlightLowBrush}" />
+    <Setter Property="Background" Value="{ThemeResource ThemeControlHighlightLowBrush}" />
     <Setter Property="Content">
       <Template>
         <Viewbox Height="10" Width="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -100,7 +100,7 @@
     <Setter Property="Height" Value="22" />
     <Setter Property="HorizontalAlignment" Value="Stretch" />
     <Setter Property="Focusable" Value="False" />
-    <Setter Property="Background" Value="{DynamicResource ThemeControlHighlightLowBrush}" />
+    <Setter Property="Background" Value="{ThemeResource ThemeControlHighlightLowBrush}" />
     <Setter Property="Content">
       <Template>
         <Viewbox Height="10" Width="10" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -111,10 +111,10 @@
   </Style>
 
   <Style Selector="DatePicker">    
-    <Setter Property="FontSize" Value="{DynamicResource FontSizeNormal}" />
-    <Setter Property="Foreground" Value="{DynamicResource ThemeForegroundBrush}" />
-    <Setter Property="Background" Value="{DynamicResource ThemeBackgroundBrush}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeControlHighlightMidBrush}"/>
+    <Setter Property="FontSize" Value="{ThemeResource FontSizeNormal}" />
+    <Setter Property="Foreground" Value="{ThemeResource ThemeForegroundBrush}" />
+    <Setter Property="Background" Value="{ThemeResource ThemeBackgroundBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeControlHighlightMidBrush}"/>
     <Setter Property="BorderThickness" Value="1"/>
     <Setter Property="HorizontalAlignment" Value="Left" />
     <Setter Property="VerticalAlignment" Value="Center" />
@@ -124,8 +124,8 @@
           <ContentPresenter Name="HeaderContentPresenter" Grid.Row="0"
                             Content="{TemplateBinding Header}"
                             ContentTemplate="{TemplateBinding HeaderTemplate}"
-                            Margin="{DynamicResource DatePickerTopHeaderMargin}"
-                            MaxWidth="{DynamicResource DatePickerThemeMaxWidth}"
+                            Margin="{ThemeResource DatePickerTopHeaderMargin}"
+                            MaxWidth="{ThemeResource DatePickerThemeMaxWidth}"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Top"/>
 
@@ -136,8 +136,8 @@
                   BorderThickness="{TemplateBinding BorderThickness}"
                   CornerRadius="{TemplateBinding CornerRadius}"
                   IsEnabled="{TemplateBinding IsEnabled}"
-                  MinWidth="{DynamicResource DatePickerThemeMinWidth}"
-                  MaxWidth="{DynamicResource DatePickerThemeMaxWidth}"
+                  MinWidth="{ThemeResource DatePickerThemeMinWidth}"
+                  MaxWidth="{ThemeResource DatePickerThemeMaxWidth}"
                   HorizontalAlignment="Stretch"
                   VerticalAlignment="Stretch"
                   HorizontalContentAlignment="Stretch"
@@ -158,27 +158,27 @@
             </Button.Template>
             <Grid Name="ButtonContentGrid" ColumnDefinitions="78*,Auto,132*,Auto,78*">
               <TextBlock Name="DayText" Text="day" HorizontalAlignment="Center"
-                         Padding="{DynamicResource DatePickerHostPadding}"
+                         Padding="{ThemeResource DatePickerHostPadding}"
                          FontFamily="{TemplateBinding FontFamily}"
                          FontWeight="{TemplateBinding FontWeight}"
                          FontSize="{TemplateBinding FontSize}"/>
               <TextBlock Name="MonthText" Text="month" TextAlignment="Left"
-                         Padding="{DynamicResource DatePickerHostMonthPadding}"
+                         Padding="{ThemeResource DatePickerHostMonthPadding}"
                          FontFamily="{TemplateBinding FontFamily}"
                          FontWeight="{TemplateBinding FontWeight}"
                          FontSize="{TemplateBinding FontSize}"/>
               <TextBlock Name="YearText" Text="year" HorizontalAlignment="Center"
-                         Padding="{DynamicResource DatePickerHostPadding}"
+                         Padding="{ThemeResource DatePickerHostPadding}"
                          FontFamily="{TemplateBinding FontFamily}"
                          FontWeight="{TemplateBinding FontWeight}"
                          FontSize="{TemplateBinding FontSize}"/>
               <Rectangle x:Name="FirstSpacer"
-                    Fill="{DynamicResource ThemeControlMidHighBrush}"
+                    Fill="{ThemeResource ThemeControlMidHighBrush}"
                     HorizontalAlignment="Center"
                     Width="1"
                     Grid.Column="1" />
               <Rectangle x:Name="SecondSpacer"
-                    Fill="{DynamicResource ThemeControlMidHighBrush}"
+                    Fill="{ThemeResource ThemeControlMidHighBrush}"
                     HorizontalAlignment="Center"
                     Width="1"
                     Grid.Column="3" />
@@ -196,37 +196,37 @@
     </Setter>
   </Style>
   <Style Selector="DatePicker /template/ ContentPresenter#HeaderContentPresenter">
-    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ThemeForegroundBrush}"/>
+    <Setter Property="TextBlock.Foreground" Value="{ThemeResource ThemeForegroundBrush}"/>
   </Style>
   <Style Selector="DatePicker:disabled /template/ Rectangle">
-    <!--<Setter Property="Fill" Value="{DynamicResource DatePickerSpacerFillDisabled}"/>-->
-    <Setter Property="Opacity" Value="{DynamicResource ThemeDisabledOpacity}" />
+    <!--<Setter Property="Fill" Value="{ThemeResource DatePickerSpacerFillDisabled}"/>-->
+    <Setter Property="Opacity" Value="{ThemeResource ThemeDisabledOpacity}" />
   </Style>
 
   <Style Selector="DatePicker /template/ Button#FlyoutButton:pointerover /template/ ContentPresenter">
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeControlHighBrush}"/>
-    <!--<Setter Property="Background" Value="{DynamicResource DatePickerButtonBackgroundPointerOver}"/>-->
-    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ThemeForegroundBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeControlHighBrush}"/>
+    <!--<Setter Property="Background" Value="{ThemeResource DatePickerButtonBackgroundPointerOver}"/>-->
+    <Setter Property="TextBlock.Foreground" Value="{ThemeResource ThemeForegroundBrush}"/>
   </Style>
 
   <Style Selector="DatePicker /template/ Button#FlyoutButton:pressed /template/ ContentPresenter">
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeControlLowBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeControlLowBrush}"/>
     <Setter Property="Background">
-      <SolidColorBrush Color="{DynamicResource ThemeControlMidHighColor}" Opacity="0.6" />
+      <SolidColorBrush Color="{ThemeResource ThemeControlMidHighColor}" Opacity="0.6" />
     </Setter>
-    <Setter Property="TextBlock.Foreground" Value="{DynamicResource ThemeForegroundBrush}"/>
+    <Setter Property="TextBlock.Foreground" Value="{ThemeResource ThemeForegroundBrush}"/>
   </Style>
 
   <Style Selector="DatePicker /template/ Button#FlyoutButton:disabled /template/ ContentPresenter">
-    <!--<Setter Property="BorderBrush" Value="{DynamicResource DatePickerButtonBorderBrushDisabled}"/>
-    <Setter Property="Background" Value="{DynamicResource DatePickerButtonBackgroundDisabled}"/>
-    <Setter Property="TextBlock.Foreground" Value="{DynamicResource DatePickerButtonForegroundDisabled}"/>-->
-    <Setter Property="Opacity" Value="{DynamicResource ThemeDisabledOpacity}" />
+    <!--<Setter Property="BorderBrush" Value="{ThemeResource DatePickerButtonBorderBrushDisabled}"/>
+    <Setter Property="Background" Value="{ThemeResource DatePickerButtonBackgroundDisabled}"/>
+    <Setter Property="TextBlock.Foreground" Value="{ThemeResource DatePickerButtonForegroundDisabled}"/>-->
+    <Setter Property="Opacity" Value="{ThemeResource ThemeDisabledOpacity}" />
   </Style>
 
   <!-- Changes foreground for watermark text when SelectedDate is null-->
   <Style Selector="DatePicker:hasnodate /template/ Button#FlyoutButton TextBlock">
-    <Setter Property="Foreground" Value="{DynamicResource ThemeForegroundLowBrush}"/>
+    <Setter Property="Foreground" Value="{ThemeResource ThemeForegroundLowBrush}"/>
   </Style>
 
   <!--WinUI: DatePickerFlyoutPresenter-->
@@ -235,17 +235,17 @@
     <Setter Property="MinWidth" Value="296" />
     <Setter Property="MaxHeight" Value="398" />    
     <Setter Property="FontWeight" Value="Normal" />
-    <Setter Property="FontSize" Value="{DynamicResource FontSizeNormal}" />
-    <Setter Property="Background" Value="{DynamicResource ThemeBackgroundBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}" />
-    <Setter Property="BorderThickness" Value="{DynamicResource DateTimeFlyoutBorderThickness}" />
+    <Setter Property="FontSize" Value="{ThemeResource FontSizeNormal}" />
+    <Setter Property="Background" Value="{ThemeResource ThemeBackgroundBrush}" />
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeBorderMidBrush}" />
+    <Setter Property="BorderThickness" Value="{ThemeResource DateTimeFlyoutBorderThickness}" />
     <Setter Property="Template">
       <ControlTemplate>
         <Border Name="Background" Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding BorderBrush}"
                 BorderThickness="{TemplateBinding BorderThickness}"
                 CornerRadius="{TemplateBinding CornerRadius}"
-                Padding="{DynamicResource DateTimeFlyoutBorderPadding}"
+                Padding="{ThemeResource DateTimeFlyoutBorderPadding}"
                 MaxHeight="398">
           <Grid Name="ContentRoot" RowDefinitions="*,Auto">
             <Grid Name="PickerContainer">
@@ -255,7 +255,7 @@
                               VerticalScrollBarVisibility="Hidden">
                   <DateTimePickerPanel Name="MonthSelector"
                                       PanelType="Month"
-                                      ItemHeight="{DynamicResource DatePickerFlyoutPresenterItemHeight}"
+                                      ItemHeight="{ThemeResource DatePickerFlyoutPresenterItemHeight}"
                                       ShouldLoop="True" />
                 </ScrollViewer>
                 <RepeatButton Name="MonthUpButton"
@@ -268,7 +268,7 @@
                               VerticalScrollBarVisibility="Hidden">
                   <DateTimePickerPanel Name="DaySelector"
                                       PanelType="Day"
-                                      ItemHeight="{DynamicResource DatePickerFlyoutPresenterItemHeight}"
+                                      ItemHeight="{ThemeResource DatePickerFlyoutPresenterItemHeight}"
                                       ShouldLoop="True" />
                 </ScrollViewer>
                 <RepeatButton Name="DayUpButton"
@@ -281,7 +281,7 @@
                               VerticalScrollBarVisibility="Hidden">
                   <DateTimePickerPanel Name="YearSelector"
                                       PanelType="Year"
-                                      ItemHeight="{DynamicResource DatePickerFlyoutPresenterItemHeight}"
+                                      ItemHeight="{ThemeResource DatePickerFlyoutPresenterItemHeight}"
                                       ShouldLoop="False" />
                 </ScrollViewer>
                 <RepeatButton Name="YearUpButton"
@@ -290,24 +290,24 @@
                               Classes="DateTimeFlyoutButtonStyle DownButton"/>
               </Panel>
               <Rectangle Name="HighlightRect" IsHitTestVisible="False" ZIndex="-1"
-                         Fill="{DynamicResource DatePickerFlyoutPresenterHighlightFill}"
+                         Fill="{ThemeResource DatePickerFlyoutPresenterHighlightFill}"
                          Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Center"
-                         Height="{DynamicResource DatePickerFlyoutPresenterHighlightHeight}" />
+                         Height="{ThemeResource DatePickerFlyoutPresenterHighlightHeight}" />
               <Rectangle Name="FirstSpacer"
-                         Fill="{DynamicResource ThemeControlMidHighBrush}"
+                         Fill="{ThemeResource ThemeControlMidHighBrush}"
                          HorizontalAlignment="Center"
-                         Width="{DynamicResource DatePickerSpacerThemeWidth}"
+                         Width="{ThemeResource DatePickerSpacerThemeWidth}"
                          Grid.Column="1" />
               <Rectangle Name="SecondSpacer"
-                         Fill="{DynamicResource ThemeControlMidHighBrush}"
+                         Fill="{ThemeResource ThemeControlMidHighBrush}"
                          HorizontalAlignment="Center"
-                         Width="{DynamicResource DatePickerSpacerThemeWidth}"
+                         Width="{ThemeResource DatePickerSpacerThemeWidth}"
                          Grid.Column="3" />
             </Grid>
-            <Grid Grid.Row="1" Height="{DynamicResource DatePickerFlyoutPresenterAcceptDismissHostGridHeight}"
+            <Grid Grid.Row="1" Height="{ThemeResource DatePickerFlyoutPresenterAcceptDismissHostGridHeight}"
                   Name="AcceptDismissGrid" ColumnDefinitions="*,*">
-              <Rectangle Height="{DynamicResource DatePickerSpacerThemeWidth}" VerticalAlignment="Top"
-                         Fill="{DynamicResource ThemeControlMidHighBrush}"
+              <Rectangle Height="{ThemeResource DatePickerSpacerThemeWidth}" VerticalAlignment="Top"
+                         Fill="{ThemeResource ThemeControlMidHighBrush}"
                          Grid.ColumnSpan="2"/>
               <Button Name="AcceptButton" Grid.Column="0" Classes="DateTimeFlyoutButtonStyle"
                           HorizontalAlignment="Stretch" VerticalAlignment="Stretch">

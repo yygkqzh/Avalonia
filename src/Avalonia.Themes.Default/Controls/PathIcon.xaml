@@ -1,10 +1,10 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <Style Selector="PathIcon">
-    <Setter Property="Foreground" Value="{DynamicResource ThemeForegroundColor}" />
+    <Setter Property="Foreground" Value="{ThemeResource ThemeForegroundColor}" />
     <Setter Property="Background" Value="Transparent" />
-    <Setter Property="Height" Value="{DynamicResource IconElementThemeHeight}" />
-    <Setter Property="Width" Value="{DynamicResource IconElementThemeWidth}" />
+    <Setter Property="Height" Value="{ThemeResource IconElementThemeHeight}" />
+    <Setter Property="Width" Value="{ThemeResource IconElementThemeWidth}" />
     <Setter Property="Template">
       <ControlTemplate>
       <Border Background="{TemplateBinding Background}">

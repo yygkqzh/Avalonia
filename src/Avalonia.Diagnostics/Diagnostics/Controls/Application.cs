@@ -17,6 +17,7 @@ namespace Avalonia.Diagnostics.Controls
         public Application(App application)
         {
             _application = application;
+            _requestedTheme = _application.RequestedTheme;
 
             if (_application.ApplicationLifetime is Lifetimes.IControlledApplicationLifetime controller)
             {
@@ -36,7 +37,27 @@ namespace Avalonia.Diagnostics.Controls
             };
         }
 
+        private ApplicationTheme _requestedTheme;
+        public static readonly DirectProperty<Application, ApplicationTheme> RequestedThemeProperty =
+            App.RequestedThemeProperty.AddOwner<Application>(o => o.RequestedTheme, (o, v) => o.RequestedTheme = v);
+        public ApplicationTheme RequestedTheme
+        {
+            get => _requestedTheme;
+            set => SetAndRaise(RequestedThemeProperty, ref _requestedTheme, value);
+        }
+
+
         internal App Instance => _application;
+
+        protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> change)
+        {
+            base.OnPropertyChanged(change);
+
+            if (change.Property == RequestedThemeProperty)
+            {
+                _application.RequestedTheme = _requestedTheme;
+            }
+        }
 
         /// <summary>
         /// Defines the <see cref="DataContext"/> property.

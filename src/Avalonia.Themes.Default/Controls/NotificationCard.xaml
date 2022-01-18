@@ -76,18 +76,18 @@
     </Style>
 
     <Style Selector="NotificationCard">
-        <Setter Property="Background" Value="{DynamicResource NotificationCardBackgroundBrush}"/>
+        <Setter Property="Background" Value="{ThemeResource NotificationCardBackgroundBrush}"/>
     </Style>
     <Style Selector="NotificationCard:information">
-        <Setter Property="Background" Value="{DynamicResource NotificationCardInformationBackgroundBrush}"/>
+        <Setter Property="Background" Value="{ThemeResource NotificationCardInformationBackgroundBrush}"/>
     </Style>
     <Style Selector="NotificationCard:success">
-        <Setter Property="Background" Value="{DynamicResource NotificationCardSuccessBackgroundBrush}"/>
+        <Setter Property="Background" Value="{ThemeResource NotificationCardSuccessBackgroundBrush}"/>
     </Style>
     <Style Selector="NotificationCard:warning">
-        <Setter Property="Background" Value="{DynamicResource NotificationCardWarningBackgroundBrush}"/>
+        <Setter Property="Background" Value="{ThemeResource NotificationCardWarningBackgroundBrush}"/>
     </Style>
     <Style Selector="NotificationCard:error">
-        <Setter Property="Background" Value="{DynamicResource NotificationCardErrorBackgroundBrush}"/>
+        <Setter Property="Background" Value="{ThemeResource NotificationCardErrorBackgroundBrush}"/>
     </Style>
 </Styles>

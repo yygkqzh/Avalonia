@@ -3,8 +3,8 @@
        Selector="PopupRoot">
   <Setter Property="Background" Value="{x:Null}"/>
   <Setter Property="TransparencyLevelHint" Value="Transparent" />
-  <Setter Property="Foreground" Value="{DynamicResource ThemeForegroundBrush}"/>
-  <Setter Property="FontSize" Value="{DynamicResource FontSizeNormal}"/>
+  <Setter Property="Foreground" Value="{ThemeResource ThemeForegroundBrush}"/>
+  <Setter Property="FontSize" Value="{ThemeResource FontSizeNormal}"/>
   <Setter Property="FontFamily" Value="{x:Static FontFamily.Default}" />
   <Setter Property="FontWeight" Value="400" />
   <Setter Property="FontStyle" Value="Normal" />

@@ -229,7 +229,7 @@
     <Setter Property="SelectionMode" Value="Extended" />
     <Setter Property="HorizontalGridLinesBrush" Value="{DynamicResource ThemeBorderHighColor}" />
     <Setter Property="VerticalGridLinesBrush" Value="{DynamicResource ThemeBorderHighColor}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderLowColor}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeBorderLowColor}"/>
     <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}" />
     <Setter Property="DropLocationIndicatorTemplate">
       <Template>

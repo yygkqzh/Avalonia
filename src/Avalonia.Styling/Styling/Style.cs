@@ -111,10 +111,16 @@ namespace Avalonia.Styling
             return match.Result;
         }
 
-        public bool TryGetResource(object key, out object? result)
+        public bool TryGetResource(object key, out object? value)
         {
-            result = null;
-            return _resources?.TryGetResource(key, out result) ?? false;
+            value = null;
+            return _resources?.TryGetResource(key, out value) ?? false;
+        }
+
+        public bool TryGetThemeResource(ApplicationTheme theme, object key, out object? value)
+        {
+            value = null;
+            return _resources?.TryGetThemeResource(theme, key, out value) ?? false;
         }
 
         /// <summary>

@@ -1,8 +1,8 @@
 <Styles xmlns="https://github.com/avaloniaui">
   <Style Selector="ButtonSpinner">
     <Setter Property="Background" Value="Transparent"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}"/>
-    <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeBorderMidBrush}"/>
+    <Setter Property="BorderThickness" Value="{ThemeResource ThemeBorderThickness}"/>
     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
     <Setter Property="VerticalContentAlignment" Value="Center"/>
     <Setter Property="Focusable" Value="True"/>
@@ -12,13 +12,13 @@
     <Setter Property="BorderBrush" Value="Transparent"/>
   </Style>
   <Style Selector="ButtonSpinner /template/ RepeatButton:pointerover">
-    <Setter Property="Background" Value="{DynamicResource ThemeControlMidBrush}"/>
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}"/>
+    <Setter Property="Background" Value="{ThemeResource ThemeControlMidBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeBorderMidBrush}"/>
   </Style>
   <Style Selector="ButtonSpinner /template/ RepeatButton#PART_IncreaseButton">
     <Setter Property="Content">
       <Template>
-        <Path Fill="{DynamicResource ThemeForegroundBrush}"
+        <Path Fill="{ThemeResource ThemeForegroundBrush}"
               Width="8"
               Height="4"
               Stretch="Uniform"
@@ -31,7 +31,7 @@
   <Style Selector="ButtonSpinner /template/ RepeatButton#PART_DecreaseButton">
     <Setter Property="Content">
       <Template>
-        <Path Fill="{DynamicResource ThemeForegroundBrush}"
+        <Path Fill="{ThemeResource ThemeForegroundBrush}"
               Width="8"
               Height="4"
               Stretch="Uniform"
@@ -96,12 +96,12 @@
     </Setter>
   </Style>
   <Style Selector="ButtonSpinner:pointerover /template/ Border#border">
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderHighBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeBorderHighBrush}"/>
   </Style>
   <Style Selector="ButtonSpinner:focus /template/ Border#border">
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderHighBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ThemeBorderHighBrush}"/>
   </Style>
   <Style Selector="ButtonSpinner:error /template/ Border#border">
-    <Setter Property="BorderBrush" Value="{DynamicResource ErrorBrush}"/>
+    <Setter Property="BorderBrush" Value="{ThemeResource ErrorBrush}"/>
   </Style>
 </Styles>

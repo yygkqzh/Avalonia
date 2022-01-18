@@ -31,5 +31,7 @@ namespace Avalonia.Controls
         /// True if the resource if found, otherwise false.
         /// </returns>
         bool TryGetResource(object key, out object? value);
+
+        bool TryGetThemeResource(ApplicationTheme theme, object key, out object? value);
     }
 }
