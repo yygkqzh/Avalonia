@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using Avalonia.Controls;
 using Avalonia.Controls.Platform;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Controls.Platform.Surfaces;
 using Avalonia.Input;
 using Avalonia.Input.Raw;
@@ -478,5 +479,7 @@ namespace Avalonia.Native
         public AcrylicPlatformCompensationLevels AcrylicCompensationLevels { get; } = new AcrylicPlatformCompensationLevels(1, 0, 0);
 
         public IPlatformHandle Handle { get; private set; }
+
+        public IFilePicker FilePicker => throw new NotImplementedException();
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Avalonia.Controls;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Controls.Platform.Surfaces;
 using Avalonia.Controls.Primitives.PopupPositioning;
 using Avalonia.Input;
@@ -243,6 +244,8 @@ namespace Avalonia.Headless
         public Action LostFocus { get; set; }
 
         public AcrylicPlatformCompensationLevels AcrylicCompensationLevels => new AcrylicPlatformCompensationLevels(1, 1, 1);
+
+        public IFilePicker FilePicker => throw new NotImplementedException();
 
         void IHeadlessWindow.KeyPress(Key key, RawInputModifiers modifiers)
         {

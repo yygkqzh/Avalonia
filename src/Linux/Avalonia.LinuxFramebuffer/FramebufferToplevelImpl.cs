@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Avalonia.Controls;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Input;
 using Avalonia.Input.Raw;
 using Avalonia.LinuxFramebuffer.Input;
@@ -83,5 +84,7 @@ namespace Avalonia.LinuxFramebuffer
         public WindowTransparencyLevel TransparencyLevel { get; private set; }
 
         public AcrylicPlatformCompensationLevels AcrylicCompensationLevels { get; } = new AcrylicPlatformCompensationLevels(1, 1, 1);
+
+        public IFilePicker FilePicker => throw new NotImplementedException();
     }
 }

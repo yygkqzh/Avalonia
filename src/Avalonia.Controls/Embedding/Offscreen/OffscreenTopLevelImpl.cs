@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Input;
 using Avalonia.Input.Raw;
 using Avalonia.Platform;
@@ -74,6 +76,8 @@ namespace Avalonia.Controls.Embedding.Offscreen
         public void SetTransparencyLevelHint(WindowTransparencyLevel transparencyLevel) { }
 
         public WindowTransparencyLevel TransparencyLevel { get; private set; }
+
+        public IFilePicker FilePicker => throw new NotImplementedException();
 
         public IPopupImpl CreatePopup() => null;
     }

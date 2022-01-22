@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Avalonia.Controls;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Input;
 using Avalonia.Input.Raw;
 using Avalonia.Layout;
@@ -172,5 +173,7 @@ namespace Avalonia.Platform
         /// Gets the <see cref="AcrylicPlatformCompensationLevels"/> for the platform.        
         /// </summary>
         AcrylicPlatformCompensationLevels AcrylicCompensationLevels { get; }
+
+        IFilePicker FilePicker { get; }
     }
 }

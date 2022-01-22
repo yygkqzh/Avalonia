@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Avalonia.Controls;
 using Avalonia.Controls.Platform;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Input;
 using Avalonia.Input.Raw;
 using Avalonia.Input.TextInput;
@@ -176,5 +177,7 @@ namespace Avalonia.Web.Blazor
         public AcrylicPlatformCompensationLevels AcrylicCompensationLevels { get; }
 
         public ITextInputMethodImpl TextInputMethod => _textInputMethod;
+
+        public IFilePicker FilePicker => throw new NotImplementedException();
     }
 }

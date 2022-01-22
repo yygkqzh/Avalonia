@@ -1,6 +1,7 @@
 using System;
 using System.Reactive.Linq;
 using Avalonia.Controls.Platform;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Controls.Primitives;
 using Avalonia.Input;
 using Avalonia.Input.Raw;
@@ -312,6 +313,9 @@ namespace Avalonia.Controls
         double IRenderRoot.RenderScaling => PlatformImpl?.RenderScaling ?? 1;
 
         IStyleHost IStyleHost.StylingParent => _globalStyles;
+
+        public IFilePicker FilePicker => PlatformImpl?.FilePicker
+            ?? throw new InvalidOperationException("Platform implementation is not available.");
 
         IRenderTarget IRenderRoot.CreateRenderTarget() => CreateRenderTarget();
 

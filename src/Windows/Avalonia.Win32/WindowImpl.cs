@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using Avalonia.Controls;
 using Avalonia.Controls.Platform;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Input;
 using Avalonia.Input.Raw;
 using Avalonia.Input.TextInput;
@@ -1359,5 +1360,7 @@ namespace Avalonia.Win32
         }
 
         public ITextInputMethodImpl TextInputMethod => Imm32InputMethod.Current;
+
+        public IFilePicker FilePicker => throw new NotImplementedException();
     }
 }

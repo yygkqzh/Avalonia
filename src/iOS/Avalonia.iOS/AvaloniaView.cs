@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using Avalonia.Controls;
 using Avalonia.Controls.Embedding;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Input;
 using Avalonia.Input.Raw;
+using Avalonia.iOS.Dialogs;
 using Avalonia.Platform;
 using Avalonia.Rendering;
 using CoreAnimation;
@@ -109,6 +111,8 @@ namespace Avalonia.iOS
 
             public AcrylicPlatformCompensationLevels AcrylicCompensationLevels { get; } =
                 new AcrylicPlatformCompensationLevels();
+
+            public IFilePicker FilePicker => new IOSFilePicker();
         }
 
         [Export("layerClass")]

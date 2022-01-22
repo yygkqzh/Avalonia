@@ -5,6 +5,7 @@ using System.Reactive.Disposables;
 using System.Threading.Tasks;
 using Avalonia.Controls;
 using Avalonia.Controls.Platform;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Controls.Primitives.PopupPositioning;
 using Avalonia.Input;
 using Avalonia.Input.Platform;
@@ -178,6 +179,8 @@ namespace Avalonia.DesignerSupport.Remote
         public bool NeedsManagedDecorations => false;
         
         public AcrylicPlatformCompensationLevels AcrylicCompensationLevels { get; } = new AcrylicPlatformCompensationLevels(1, 1, 1);
+
+        public IFilePicker FilePicker => throw new NotImplementedException();
     }
 
     class ClipboardStub : IClipboard

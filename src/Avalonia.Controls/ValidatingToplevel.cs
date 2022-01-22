@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Avalonia.Controls.Platform;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Controls.Primitives.PopupPositioning;
 using Avalonia.Input;
 using Avalonia.Input.Raw;
@@ -129,6 +130,8 @@ internal class ValidatingToplevelImpl : ITopLevelImpl, ITopLevelImplWithNativeCo
         (Inner as ITopLevelImplWithNativeMenuExporter)?.NativeMenuExporter;
 
     public ITextInputMethodImpl TextInputMethod => (Inner as ITopLevelImplWithTextInputMethod)?.TextInputMethod;
+
+    public IFilePicker FilePicker => Inner.FilePicker;
 }
 
 internal class ValidatingWindowBaseImpl : ValidatingToplevelImpl, IWindowBaseImpl

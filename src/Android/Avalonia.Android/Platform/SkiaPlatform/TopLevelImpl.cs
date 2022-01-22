@@ -10,6 +10,7 @@ using Avalonia.Android.Platform.Specific;
 using Avalonia.Android.Platform.Specific.Helpers;
 using Avalonia.Controls;
 using Avalonia.Controls.Platform;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Controls.Platform.Surfaces;
 using Avalonia.Input;
 using Avalonia.Input.Raw;
@@ -46,6 +47,8 @@ namespace Avalonia.Android.Platform.SkiaPlatform
 
             MaxClientSize = new PixelSize(_view.Resources.DisplayMetrics.WidthPixels,
                 _view.Resources.DisplayMetrics.HeightPixels).ToSize(RenderScaling);
+
+            FilePicker = new Dialogs.AndroidFilePicker((AvaloniaActivity)context);
         }
 
         public virtual Point GetAvaloniaPointFromEvent(MotionEvent e, int pointerIndex) =>
@@ -224,6 +227,8 @@ namespace Avalonia.Android.Platform.SkiaPlatform
         public double Scaling => RenderScaling;
 
         public ITextInputMethodImpl TextInputMethod => _textInputMethod;
+
+        public IFilePicker FilePicker { get; }
 
         public void SetTransparencyLevelHint(WindowTransparencyLevel transparencyLevel)
         {

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Avalonia.Controls;
 using Avalonia.Controls.Platform;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Controls.Primitives.PopupPositioning;
 using Avalonia.FreeDesktop;
 using Avalonia.Input;
@@ -1173,5 +1174,7 @@ namespace Avalonia.X11
         public AcrylicPlatformCompensationLevels AcrylicCompensationLevels { get; } = new AcrylicPlatformCompensationLevels(1, 0.8, 0.8);
 
         public bool NeedsManagedDecorations => false;
+
+        public IFilePicker FilePicker => throw new NotImplementedException();
     }
 }

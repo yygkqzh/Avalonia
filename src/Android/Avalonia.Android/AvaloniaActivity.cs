@@ -1,11 +1,16 @@
+using System;
+
 using Android.App;
+using Android.Content;
 using Android.OS;
-using Android.Views;
+using Android.Runtime;
 
 namespace Avalonia.Android
 {
     public abstract class AvaloniaActivity : Activity
     {
+        internal Action<int, Result, Intent> ActivityResult;
+
         internal AvaloniaView View;
         object _content;
 
@@ -30,6 +35,13 @@ namespace Avalonia.Android
                 if (View != null)
                     View.Content = value;
             }
+        }
+
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            ActivityResult?.Invoke(requestCode, resultCode, data);
         }
     }
 }

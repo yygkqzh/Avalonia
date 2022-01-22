@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Avalonia.Controls;
+using Avalonia.Controls.Platform.Dialogs;
 using Avalonia.Controls.Presenters;
 using Avalonia.Dialogs;
 using Avalonia.Layout;
@@ -37,6 +38,17 @@ namespace ControlCatalog.Pages
                         Name = "All files",
                         Extensions = new List<string> {"*"}
                     }
+                };
+            }
+
+            List<FilePickerFileType> GetFileTypes()
+            {
+                if (this.FindControl<CheckBox>("UseFilters").IsChecked != true)
+                    return null;
+                return new List<FilePickerFileType>
+                {
+                    FilePickerFileTypes.All,
+                    FilePickerFileTypes.TextPlain
                 };
             }
 
@@ -138,6 +150,60 @@ namespace ControlCatalog.Pages
 
                 window.Show(GetWindow());
             };
+
+            this.FindControl<Button>("OpenFilePicker").Click += async delegate
+            {
+                var result = await GetTopLevel().FilePicker.OpenAsync(new FilePickerOpenOptions()
+                {
+                    Title = "Open file",
+                    FileTypes = GetFileTypes()
+                });
+                results.Items = result.Select(f => f.TryGetFullPath(out var fullPath) ? fullPath : f.FileName).ToArray();
+                resultsVisible.IsVisible = result?.Any() == true;
+
+                if (result.FirstOrDefault() is { } file)
+                {
+                    using var stream = file.Stream;
+                    using var reader = new System.IO.StreamReader(stream);
+                    this.FindControl<TextBox>("OpenedFileContent").Text = reader.ReadToEnd();
+                }
+            };
+            this.FindControl<Button>("OpenMultipleFilesPicker").Click += async delegate
+            {
+                var result = await GetTopLevel().FilePicker.OpenAsync(new FilePickerOpenOptions()
+                {
+                    Title = "Open multiple file",
+                    FileTypes = GetFileTypes(),
+                    AllowMultiple = true
+                });
+                results.Items = result.Select(f => f.TryGetFullPath(out var fullPath) ? fullPath : f.FileName).ToArray();
+                resultsVisible.IsVisible = result?.Any() == true;
+
+                if (result.FirstOrDefault() is { } file)
+                {
+                    using var stream = file.Stream;
+                    using var reader = new System.IO.StreamReader(stream);
+                    this.FindControl<TextBox>("OpenedFileContent").Text = reader.ReadToEnd();
+                }
+            };
+            this.FindControl<Button>("SaveFilePicker").Click += async delegate
+            {
+                var file = await GetTopLevel().FilePicker.SaveAsync(new FilePickerSaveOptions()
+                {
+                    Title = "Save file",
+                    FileTypes = GetFileTypes()
+                });
+                results.Items = new[] { file }.Select(f => f.TryGetFullPath(out var fullPath) ? fullPath : f.FileName).ToArray();
+                resultsVisible.IsVisible = file is not null;
+
+                if (file is not null)
+                {
+                    using var stream = file.Stream;
+                    using var reader = new System.IO.StreamWriter(stream);
+                    reader.WriteLine(this.FindControl<TextBox>("OpenedFileContent").Text);
+                }
+            };
+
         }
 
         private Window CreateSampleWindow()
@@ -170,6 +236,7 @@ namespace ControlCatalog.Pages
         }
 
         Window GetWindow() => (Window)this.VisualRoot;
+        TopLevel GetTopLevel() => (TopLevel)this.VisualRoot;
 
         private void InitializeComponent()
         {
