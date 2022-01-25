@@ -16,7 +16,10 @@
   <PropertyGroup>
     <TypescriptOutDir>wwwroot</TypescriptOutDir>
     <TypeScriptNoEmitOnError>true</TypeScriptNoEmitOnError>
+    <TypeScriptModuleResolution>Node</TypeScriptModuleResolution>
     <TypeScriptNoImplicitReturns>true</TypeScriptNoImplicitReturns>
+    <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
+    <TypeScriptEmitDecoratorMetadata>True</TypeScriptEmitDecoratorMetadata>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">

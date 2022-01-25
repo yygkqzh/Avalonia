@@ -16,6 +16,6 @@ namespace Avalonia.Controls.Platform.Dialogs
 
         bool CanExport { get; }
         Task Export(FilePickerSaveOptions options, Func<Stream, FilePickerFileType, Task> writer);
-        IFilePickerBookmark? OpenBookmark(string bookmark);
+        Task<IFilePickerBookmark?> OpenBookmark(string bookmark);
     }
 }

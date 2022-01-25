@@ -11,5 +11,6 @@ namespace Avalonia.Controls.Platform.Dialogs
         Task<Stream> OpenRead();
         Task<Stream> OpenWrite();
         Task Release();
+        Task<bool> RequestPermissions();
     }
 }
