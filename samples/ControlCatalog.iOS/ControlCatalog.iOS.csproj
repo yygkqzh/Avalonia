@@ -2,7 +2,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0-ios</TargetFramework>
-    <SupportedOSPlatformVersion>14.2</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\iOS\Avalonia.iOS\Avalonia.iOS.csproj" />

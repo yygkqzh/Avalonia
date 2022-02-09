@@ -368,6 +368,10 @@ namespace Avalonia.OpenGL
         public delegate void GlDeleteShader(int shader);
         [GlEntryPoint("glDeleteShader")]
         public GlDeleteShader DeleteShader { get; }
+        
+        public delegate void GLGetRenderbufferParameteriv(int target, int name, int[] value);
+        [GlEntryPoint("glGetRenderbufferParameteriv")]
+        public GLGetRenderbufferParameteriv GetRenderbufferParameteriv { get; }
         // ReSharper restore UnassignedGetOnlyAutoProperty
     }
 }
